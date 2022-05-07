@@ -6,9 +6,11 @@
 
 {% block body %}
 <div class="content">
-    <h1 style="text-align: center">Task Master</h1>
+    <h1 style="text-align: center">Countdown game</h1>
     {% if tasks|length < 1 %}
-    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+    <h4 style="text-align: center">Welcome to Online Countdown!</h4>
+        <h5 style="text-align: center">Developed by Reza Pirbhai.</h5>
+
     {% else %}
     <table>
         <tr>
@@ -29,6 +31,10 @@
         {% endfor %}
     </table>
     {% endif %}
+
+    <div class = "button">
+          <input type ="button "id = "button" value = "Help">
+    </div>
 
     <div class="form">
         <form action="/" method="POST">
