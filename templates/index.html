@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Task Master</title>
+<title>Coun+down</title>
 {% endblock %}
 
 {% block body %}
+
 <div class="content">
     <h1 style="text-align: center">Countdown game</h1>
     {% if tasks|length < 1 %}
@@ -12,40 +13,21 @@
         <h5 style="text-align: center">Developed by Reza Pirbhai.</h5>
 
     {% else %}
-    <table>
-        <tr>
-            <th>Task</th>
-            <th>Added</th>
-            <th>Actions</th>
-        </tr>
-        {% for task in tasks %}
-            <tr>
-                <td>{{ task.content }}</td>
-                <td>{{ task.date_created.date() }}</td>
-                <td>
-                    <a href="/delete/{{task.id}}">Delete</a>
-                    <br>
-                    <a href="/update/{{task.id}}">Update</a>
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
+
     {% endif %}
 
-    <div class = "button">
-        <form action="/" method = "POST">
-        <button type ="button "> Help </button>
+    <div class = "button"></div>
+       <a href="{{ url_for('help') }}">
+           <button type ="button"> Help </button>
+             </a>
+
+
         <button type ="button "> Multiplayer </button>
         <button type ="button "> Daily Challenge </button>
         <button type ="button "> Practise </button>
             </form>
     </div>
 
-    <div class="form">
-        <form action="/" method="POST">
-            <input type="text" name="content" id="content">
-            <input type="submit" value="Add Task">
-        </form>
-    </div>
+
 </div>
 {% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Help</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Help</h1>
+
+
+    <!a href="{{ url_for('/index') }}">
+           <!button type ="button"> Go back <"/button>
+            !/a>
+
+    <button onclick="AboutUs()">About us</button>
+    <p id = "aboutus"></p>
+        <script>
+            function AboutUs() {
+                document.getElementById("aboutus").innerHTML = "This game was designed to be computer science coursework";
+            }
+            </script>
+
+    <button onclick="how_points()">How Points Work</button>
+    <p id = "how_points_work"></p>
+        <script>
+            function how_points() {
+                document.getElementById("how_points_work").innerHTML = "Points work off how close you are to the number and the time taken to find the number";
+            }
+            </script>
+
+
+    <button onclick="how_game()">How the game works</button>
+    <p id = "htgw"></p>
+        <script>
+            function how_game() {
+                document.getElementById("htgw").innerHTML = "Using the operations of '+,-,/,*' your aim is to reach the target number within the chosen time or as close to the target number as possible.";
+            }
+            </script>
+
+
+    </div>
+</div>
+{% endblock %}
