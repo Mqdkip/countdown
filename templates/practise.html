@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Practise</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Practise</h1>
+
+
+   <div class = "button"></div>
+       <a href="{{ url_for('home') }}">
+           <button type ="button"> Go back </button>
+             </a>
+
+
+    <button onclick="practise()">Practise</button>
+    <p id = "practise"></p>
+        <script>
+            function practise() {
+                document.getElementById("practise").innerHTML = "Practise mode!";
+            }
+            </script>
+
+
+
+
+
+    </div>
+</div>
+{% endblock %}

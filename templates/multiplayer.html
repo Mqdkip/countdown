@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Multiplayer</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Multiplayer</h1>
+
+
+   <div class = "button"></div>
+       <a href="{{ url_for('home') }}">
+           <button type ="button"> Go back </button>
+             </a>
+
+
+    <button onclick="Knockout()">Knockout</button>
+    <p id = "knockout"></p>
+        <script>
+            function Knockout() {
+                document.getElementById("knockout").innerHTML = "Knockout mode!";
+            }
+            </script>
+
+
+  <button onclick="Classic()">Classic</button>
+    <p id = "classic"></p>
+        <script>
+            function Classic() {
+                document.getElementById("classic").innerHTML = "Classic mode!";
+            }
+            </script>
+
+
+
+
+    </div>
+</div>
+{% endblock %}

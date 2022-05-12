@@ -7,23 +7,32 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
 
-class Todo(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    content = db.Column(db.String(200), nullable=False)
-    date_created = db.Column(db.DateTime, default=datetime.utcnow)
-
-    def __repr__(self):
-        return '<Task %r>' % self.id
 
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
+@app.route('/multiplayer')
+def multiplayer():
+    return render_template('multiplayer.html')
 
 @app.route('/help')
 def help():
     return render_template('help.html')
+
+@app.route('/daily')
+def daily():
+    return render_template('daily.html')
+
+@app.route('/practise')
+def practise():
+    return render_template('practise.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 
 
 if __name__ == "__main__":

@@ -17,14 +17,28 @@
     {% endif %}
 
     <div class = "button"></div>
+
+    <a href="{{ url_for('login') }}">
+           <button type ="button"> Log in </button>
+             </a>
+
+
        <a href="{{ url_for('help') }}">
            <button type ="button"> Help </button>
              </a>
 
+        <a href="{{ url_for('multiplayer') }}">
+           <button type ="button"> Multiplayer </button>
+             </a>
 
-        <button type ="button "> Multiplayer </button>
-        <button type ="button "> Daily Challenge </button>
-        <button type ="button "> Practise </button>
+        <a href="{{ url_for('daily') }}">
+           <button type ="button"> Daily Challenge </button>
+             </a>
+
+        <a href="{{ url_for('practise') }}">
+           <button type ="button"> Practise </button>
+             </a>
+
             </form>
     </div>
 
