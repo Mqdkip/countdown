@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    height:100px;
+    width: 100px;
+    align-items: center;
+
+}
+
+h1{
+    font-family: 'Comic Sans MS';
+    font-size: 90px;
+}

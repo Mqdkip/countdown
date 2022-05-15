@@ -15,15 +15,16 @@
              </a>
 
 
-    <button onclick="practise()">Practise</button>
-    <p id = "practise"></p>
-        <script>
-            function practise() {
-                document.getElementById("practise").innerHTML = "Practise mode!";
-            }
-            </script>
+   <div class = "button"></div>
+       <a href="{{ url_for('countdown_prc') }}">
+           <button type ="button"> Play practise mode </button>
+             </a>
 
 
+ <div class = "button"></div>
+       <a href="{{ url_for('timer') }}">
+           <button type ="button"> Timer </button>
+             </a>
 
 
 
