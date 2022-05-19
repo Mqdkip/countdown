@@ -1,16 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="timer/timer.css">
-</head>
+<html>
 <body>
-<section>
-    <div class = "container">
-        <h1>00:00</h1>
-    </div>
-</section>
-<script src = "timer.js"></script>
+
+<div id="safeTimer">
+<h2>Safe Timer</h2>
+<p id="safeTimerDisplay"></p>
+</div>
+
+<script>
+var myVar = setInterval(function(){ myTimer() }, 1000);
+var secondlimit = 30;
+
+function myTimer() {
+if(secondlimit == 0)
+{
+    myStopFunction();
+}
+
+document.getElementById("safeTimerDisplay").innerHTML = '00:' + zeroPad(secondlimit,2);
+secondlimit = secondlimit  - 1;
+
+}
+
+function myStopFunction() {
+    clearInterval(myVar);
+}
+
+function zeroPad(num, places) {
+  var zero = places - num.toString().length + 1;
+  return Array(+(zero > 0 && zero)).join("0") + num;
+}
+
+</script>
+
 </body>
 </html>
